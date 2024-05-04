@@ -43,7 +43,7 @@ class HotelGrid extends StatelessWidget {
             children: [
               Expanded(
                   child: HotelCard(
-                      title: 'Urban Luxe',
+                      title: 'Burbon Luxe',
                       description: 'Book your getaway to this contem...',
                       price: '3,899\$',
                       rating: '4.8',
@@ -53,7 +53,7 @@ class HotelGrid extends StatelessWidget {
               ),
               Expanded(
                   child: HotelCard(
-                      title: 'Urban Luxe',
+                      title: 'Suburbon Luxe',
                       description: 'Book your getaway to this contem...',
                       price: '3,899\$',
                       rating: '4.8',
