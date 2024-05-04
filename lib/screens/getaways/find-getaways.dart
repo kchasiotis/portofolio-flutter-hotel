@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portofolio/screens/getaways/widgets/TextCarousel.dart';
 import 'package:portofolio/screens/getaways/widgets/input_widget.dart';
+import 'widgets/HotelGrid.dart';
 import 'widgets/hotel_card.dart';
 
 //todo: set distances as constants
@@ -31,99 +33,11 @@ class FindGetaways extends StatelessWidget {
               Container(
                 height: 24,
               ),
-              Padding(
-                  padding: const EdgeInsets.only(
-                    left: 30,
-                  ),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: <Widget>[
-                        const Text(
-                          'Luxe',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.white,
-                          ),
-                        ),
-                        Container(
-                          width: 16,
-                        ),
-                        const Text(
-                          'Countryside',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Color(0xff39414E),
-                          ),
-                        ),
-                        Container(
-                          width: 16,
-                        ),
-                        const Text(
-                          'Islands',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Color(0xff39414E),
-                          ),
-                        ),
-                        Container(
-                          width: 16,
-                        ),
-                        const Text(
-                          'Private rooms',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Color(0xff39414E),
-                          ),
-                        ),
-                        Container(
-                          width: 16,
-                        ),
-                        const Text(
-                          'Desert',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Color(0xff39414E),
-                          ),
-                        )
-                      ],
-                    ),
-                  )),
+              const TextCarousel(),
               Container(
                 height: 20,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        HotelCard(
-                            imagePath:
-                                'images/r-architecture-GGupkreKwxA-unsplash.jpg'),
-                        HotelCard(imagePath: 'images/suburb.jpg')
-                      ],
-                    ),
-                    Container(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        HotelCard(
-                            imagePath:
-                                'images/garden.png'),
-                        HotelCard(
-                            imagePath:
-                                'images/suite.png')
-                      ],
-                    )
-                  ],
-                ),
-              )
+              const HotelGrid(),
             ])));
   }
 }
