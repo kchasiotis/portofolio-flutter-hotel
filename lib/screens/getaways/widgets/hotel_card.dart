@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 
 class HotelCard extends StatelessWidget {
+  final String imagePath;
+  HotelCard({required this.imagePath});
+
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -13,7 +16,7 @@ class HotelCard extends StatelessWidget {
           children: <Widget>[
             Image(
               image:
-                  AssetImage('images/r-architecture-GGupkreKwxA-unsplash.jpg'),
+                  AssetImage(imagePath),
               fit: BoxFit.cover,
               height: 160,
               width: 150,
