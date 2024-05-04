@@ -10,9 +10,9 @@ class FindGetaways extends StatelessWidget {
     return Container(
         color: const Color(0xff0C1015),
         child: Column(children: <Widget>[
-          Padding(
-              padding: const EdgeInsets.only(left: 30, right: 30, top: 70),
-              child: const Text(
+          const Padding(
+              padding: EdgeInsets.only(left: 30, right: 30, top: 70),
+              child: Text(
                 'Find the best getaways for you',
                 style: TextStyle(fontSize: 32, color: Colors.white),
               )),
