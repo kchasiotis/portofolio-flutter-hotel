@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/screens/getaways/widgets/input_widget.dart';
+import 'widgets/hotel_card.dart';
 
 //todo: set distances as constants
 class FindGetaways extends StatelessWidget {
@@ -29,72 +30,73 @@ class FindGetaways extends StatelessWidget {
           Container(
             height: 24,
           ),
-          Flexible(
-              child: Padding(
-            padding: const EdgeInsets.only(
-              left: 30,
-            ),
-            child: ListView(
-              physics: const AlwaysScrollableScrollPhysics(),
-              // https://stackoverflow.com/questions/48081917/flutter-listview-not-scrollable-not-bouncing
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
-              // Set this
-              children: <Widget>[
-                const Text(
-                  'Luxe',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.white,
-                  ),
+          Padding(
+              padding: const EdgeInsets.only(
+                left: 30,
+              ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    const Text(
+                      'Luxe',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        decoration: TextDecoration.underline,
+                        decorationColor: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      width: 16,
+                    ),
+                    const Text(
+                      'Countryside',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff39414E),
+                      ),
+                    ),
+                    Container(
+                      width: 16,
+                    ),
+                    const Text(
+                      'Islands',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff39414E),
+                      ),
+                    ),
+                    Container(
+                      width: 16,
+                    ),
+                    const Text(
+                      'Private rooms',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff39414E),
+                      ),
+                    ),
+                    Container(
+                      width: 16,
+                    ),
+                    const Text(
+                      'Desert',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff39414E),
+                      ),
+                    )
+                  ],
                 ),
-                Container(
-                  width: 16,
-                ),
-                const Text(
-                  'Countryside',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xff39414E),
-                  ),
-                ),
-                Container(
-                  width: 16,
-                ),
-                const Text(
-                  'Islands',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xff39414E),
-                  ),
-                ),
-                Container(
-                  width: 16,
-                ),
-                const Text(
-                  'Private rooms',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xff39414E),
-                  ),
-                ),
-                Container(
-                  width: 16,
-                ),
-                const Text(
-                  'Desert',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xff39414E),
-                  ),
-                )
-              ],
-            ),
-          )),
+              )),
           Container(
             height: 20,
+          ),
+          Container(
+            child: Column(
+              children: [HotelCard()],
+            ),
           )
         ]));
   }
