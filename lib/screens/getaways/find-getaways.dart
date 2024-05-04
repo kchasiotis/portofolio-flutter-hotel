@@ -23,52 +23,65 @@ class FindGetaways extends StatelessWidget {
               Container(
                 height: 24,
               ),
-              SingleChildScrollView(
+              Flexible(
+                  child: ListView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                // https://stackoverflow.com/questions/48081917/flutter-listview-not-scrollable-not-bouncing
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Text(
-                      'Luxe',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        decoration: TextDecoration.underline,
-                        decorationColor: Colors.white,
-                      ),
+                shrinkWrap: true,
+                // Set this
+                children: <Widget>[
+                  Text(
+                    'Luxe',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.white,
                     ),
-                    Container(
-                      width: 16,
+                  ),
+                  Container(
+                    width: 16,
+                  ),
+                  Text(
+                    'Countryside',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color(0xff39414E),
                     ),
-                    Text(
-                      'Countryside',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Color(0xff39414E),
-                      ),
+                  ),
+                  Container(
+                    width: 16,
+                  ),
+                  Text(
+                    'Islands',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color(0xff39414E),
                     ),
-                    Container(
-                      width: 16,
+                  ),
+                  Container(
+                    width: 16,
+                  ),
+                  Text(
+                    'Private rooms',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color(0xff39414E),
                     ),
-                    Text(
-                      'Islands',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Color(0xff39414E),
-                      ),
+                  ),
+                  Container(
+                    width: 16,
+                  ),
+                  Text(
+                    'Desert',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color(0xff39414E),
                     ),
-                    Container(
-                      width: 16,
-                    ),
-                    Text(
-                      'Private rooms',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Color(0xff39414E),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+                  )
+                ],
+              )),
               Container(
                 height: 20,
               )
