@@ -31,8 +31,14 @@ class HotelGrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
             children: [
-              HotelCard(imagePath: 'images/garden.png'),
-              HotelCard(imagePath: 'images/suite.png')
+              Expanded(
+                  child: HotelCard(
+                      imagePath:
+                      'images/garden.png')),
+              Container(
+                width: 10,
+              ),
+              Expanded(child: HotelCard(imagePath: 'images/suite.png'))
             ],
           )
         ],
