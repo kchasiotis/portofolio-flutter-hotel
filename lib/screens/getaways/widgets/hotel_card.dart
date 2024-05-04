@@ -30,12 +30,12 @@ class HotelCard extends StatelessWidget {
               width: double.infinity,
             ),
             Padding(
-              padding: EdgeInsets.only(top: 10, left: 12),
+              padding: const EdgeInsets.only(top: 10, left: 12),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                   ),
@@ -43,14 +43,14 @@ class HotelCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 12,
               ),
               child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     description,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white54,
                       fontSize: 12,
                       fontWeight: FontWeight.w100,
@@ -67,13 +67,13 @@ class HotelCard extends StatelessWidget {
                       children: [
                         Text(
                           price,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
+                        const Text(
                           '/',
                           style: TextStyle(
                             color: Colors.white54,
@@ -81,7 +81,7 @@ class HotelCard extends StatelessWidget {
                             fontWeight: FontWeight.w100,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'night',
                           style: TextStyle(
                             color: Colors.white54,
@@ -91,7 +91,7 @@ class HotelCard extends StatelessWidget {
                         ),
                       ],
                     )),
-                padding: EdgeInsets.only(left: 12)),
+                padding: const EdgeInsets.only(left: 12)),
             Container(
               height: 12,
             ),
