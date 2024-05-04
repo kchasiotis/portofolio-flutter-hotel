@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio/screens/getaways/widgets/TextCarousel.dart';
+import 'package:portofolio/screens/getaways/widgets/text_carousel.dart';
 import 'package:portofolio/screens/getaways/widgets/input_widget.dart';
-import 'widgets/HotelGrid.dart';
+import 'widgets/hotel_grid.dart';
 import 'widgets/hotel_card.dart';
 
 //todo: set distances as constants
