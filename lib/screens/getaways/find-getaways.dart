@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/screens/getaways/widgets/input_widget.dart';
 
+//todo: set distances as constants
 class FindGetaways extends StatelessWidget {
   const FindGetaways({super.key});
 
@@ -19,6 +20,58 @@ class FindGetaways extends StatelessWidget {
                 height: 24,
               ),
               const InputWidget(),
+              Container(
+                height: 24,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Text(
+                      'Luxe',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        decoration: TextDecoration.underline,
+                        decorationColor: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      width: 16,
+                    ),
+                    Text(
+                      'Countryside',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff39414E),
+                      ),
+                    ),
+                    Container(
+                      width: 16,
+                    ),
+                    Text(
+                      'Islands',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff39414E),
+                      ),
+                    ),
+                    Container(
+                      width: 16,
+                    ),
+                    Text(
+                      'Private rooms',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xff39414E),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 20,
+              )
             ])));
   }
 }
