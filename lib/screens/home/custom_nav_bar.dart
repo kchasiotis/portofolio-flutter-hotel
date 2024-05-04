@@ -18,10 +18,10 @@ class MenuItem extends StatelessWidget {
             height: 24,
           ),
           Padding(
-            padding: EdgeInsets.only(top: 3),
+            padding: const EdgeInsets.only(top: 3),
             child: Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white54,
                 fontSize: 10,
               ),
@@ -33,7 +33,7 @@ class MenuItem extends StatelessWidget {
   }
 }
 
-Color bottonNavBgColor = Color(0xff0C1015);
+Color bottonNavBgColor = const Color(0xff0C1015);
 
 class CustomNavBar extends StatefulWidget {
   static int _selectedIndex = 0;
@@ -55,15 +55,15 @@ class CustomNavBarState extends State<CustomNavBar> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Container(
-      height: 90,
+      height: 85,
       //TODO: In Future remove the height
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 11),
       margin: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
-        color: bottonNavBgColor.withOpacity(0.9),
+        color: bottonNavBgColor.withOpacity(0.98),
         border: Border(top: BorderSide(color: Colors.white.withOpacity(0.2))),
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(16), topRight: Radius.circular(16)),
+        borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(32), topRight: Radius.circular(32)),
         boxShadow: [
           BoxShadow(
             color: bottonNavBgColor.withOpacity(0.3),
@@ -73,50 +73,44 @@ class CustomNavBarState extends State<CustomNavBar> {
         ],
       ),
       // TODO: Animated Icons,
-      child: Padding(
-          padding:
-              const EdgeInsets.only(left: 50, right: 50, top: 10, bottom: 0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
             children: [
-              Column(
-                children: [
-                  SvgPicture.asset(
-                    'images/nav_bar/home-cropped.svg',
-                    width: 30,
-                    height: 30,
+              SvgPicture.asset(
+                'images/nav_bar/home-cropped.svg',
+                width: 30,
+                height: 30,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 3),
+                child: Text(
+                  'home',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.white,
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 3),
-                    child: Text(
-                      'home',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        decoration: TextDecoration.underline,
-                        decorationColor: Colors.white,
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              MenuItem(
-                icon: 'images/nav_bar/message-question.svg',
-                text: 'inbox',
-              ),
-              MenuItem(
-                icon: 'images/nav_bar/heart.svg',
-                text: 'favourites',
-              ),
-              MenuItem(
-                icon: 'images/nav_bar/profile.svg',
-                text: 'profile',
-              ),
+                ),
+              )
             ],
-          )),
+          ),
+          MenuItem(
+            icon: 'images/nav_bar/message-question.svg',
+            text: 'inbox',
+          ),
+          MenuItem(
+            icon: 'images/nav_bar/heart.svg',
+            text: 'favourites',
+          ),
+          MenuItem(
+            icon: 'images/nav_bar/profile.svg',
+            text: 'profile',
+          ),
+        ],
+      ),
     ));
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
