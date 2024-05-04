@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class NavigationBar2 extends StatefulWidget {
+class CustomNavBar extends StatefulWidget {
   static int _selectedIndex = 0;
 
-  const NavigationBar2({super.key});
+  const CustomNavBar({super.key});
 
   @override
-  NavigationBar2State createState() => NavigationBar2State();
+  CustomNavBarState createState() => CustomNavBarState();
 }
 
-class NavigationBar2State extends State<NavigationBar2> {
+class CustomNavBarState extends State<CustomNavBar> {
   void _onItemTapped(int index) {
     setState(() {
-      NavigationBar2._selectedIndex = index;
+      CustomNavBar._selectedIndex = index;
     });
   }
 
@@ -21,7 +21,7 @@ class NavigationBar2State extends State<NavigationBar2> {
 
     return BottomNavigationBar(
         elevation: 0, // to get rid of the shadow
-        currentIndex: NavigationBar2._selectedIndex,
+        currentIndex: CustomNavBar._selectedIndex,
         selectedItemColor: Colors.white,
         onTap: _onItemTapped,
         backgroundColor: Color(0xff0C1015).withOpacity(0.99), // transparent, you could use 0x44aaaaff to make it slightly less transparent with a blue hue.

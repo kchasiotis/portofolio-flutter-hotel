@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return const Scaffold(
-      bottomNavigationBar: NavigationBar2(), // here you make use of the transparent bar.
+      bottomNavigationBar: CustomNavBar(), // here you make use of the transparent bar.
       extendBody: true, // very important as noted
 
       body: Center(
