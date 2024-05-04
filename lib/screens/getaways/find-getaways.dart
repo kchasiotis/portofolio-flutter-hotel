@@ -94,9 +94,21 @@ class FindGetaways extends StatelessWidget {
             height: 20,
           ),
           Container(
-            child: Column(
-              children: [HotelCard()],
+            child: Padding(child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [HotelCard(), HotelCard()],
+                ),
+                Container(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [HotelCard(), HotelCard()],
+                )
+
+              ],
             ),
+            padding: EdgeInsets.symmetric(horizontal: 30),),
           )
         ]));
   }
