@@ -7,7 +7,7 @@ class HotelGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
         children: [
           Row(
@@ -31,8 +31,14 @@ class HotelGrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
             children: [
-              HotelCard(imagePath: 'images/garden.png'),
-              HotelCard(imagePath: 'images/suite.png')
+              Expanded(
+                  child: HotelCard(
+                      imagePath:
+                      'images/garden.png')),
+              Container(
+                width: 10,
+              ),
+              Expanded(child: HotelCard(imagePath: 'images/suite.png'))
             ],
           )
         ],
