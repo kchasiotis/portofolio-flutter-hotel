@@ -31,7 +31,7 @@ class FindGetaways extends StatelessWidget {
                 shrinkWrap: true,
                 // Set this
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'Luxe',
                     style: TextStyle(
                       fontSize: 16,
@@ -43,7 +43,7 @@ class FindGetaways extends StatelessWidget {
                   Container(
                     width: 16,
                   ),
-                  Text(
+                  const Text(
                     'Countryside',
                     style: TextStyle(
                       fontSize: 16,
@@ -53,7 +53,7 @@ class FindGetaways extends StatelessWidget {
                   Container(
                     width: 16,
                   ),
-                  Text(
+                  const Text(
                     'Islands',
                     style: TextStyle(
                       fontSize: 16,
@@ -63,7 +63,7 @@ class FindGetaways extends StatelessWidget {
                   Container(
                     width: 16,
                   ),
-                  Text(
+                  const Text(
                     'Private rooms',
                     style: TextStyle(
                       fontSize: 16,
@@ -73,7 +73,7 @@ class FindGetaways extends StatelessWidget {
                   Container(
                     width: 16,
                   ),
-                  Text(
+                  const Text(
                     'Desert',
                     style: TextStyle(
                       fontSize: 16,
