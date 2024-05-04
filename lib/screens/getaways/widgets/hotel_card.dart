@@ -2,20 +2,29 @@ import 'package:flutter/material.dart';
 
 class HotelCard extends StatelessWidget {
   final String imagePath;
-  HotelCard({required this.imagePath});
+  final String title;
+  final String description;
+  final String price;
+  final String rating;
+
+  HotelCard(
+      {required this.imagePath,
+      required this.title,
+      required this.description,
+      required this.price,
+      required this.rating});
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(8),
       child: Container(
         width: double.infinity,
         color: const Color(0xff16202F),
         child: Column(
           children: <Widget>[
             Image(
-              image:
-                  AssetImage(imagePath),
+              image: AssetImage(imagePath),
               fit: BoxFit.cover,
               height: 150,
               width: double.infinity,
@@ -25,7 +34,7 @@ class HotelCard extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Urban Luxe',
+                  title,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -40,7 +49,7 @@ class HotelCard extends StatelessWidget {
               child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'Book your getaway to this contem...',
+                    description,
                     style: TextStyle(
                       color: Colors.white54,
                       fontSize: 12,
@@ -57,7 +66,7 @@ class HotelCard extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          '3,899\$',
+                          price,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -80,7 +89,6 @@ class HotelCard extends StatelessWidget {
                             fontWeight: FontWeight.w100,
                           ),
                         ),
-
                       ],
                     )),
                 padding: EdgeInsets.only(left: 12)),

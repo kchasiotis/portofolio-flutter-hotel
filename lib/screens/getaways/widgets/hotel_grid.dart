@@ -16,12 +16,22 @@ class HotelGrid extends StatelessWidget {
             children: [
               Expanded(
                   child: HotelCard(
+                      title: 'Urban Luxe',
+                      description: 'Book your getaway to this contem...',
+                      price: '3,899\$',
+                      rating: '4.8',
                       imagePath:
                           'images/r-architecture-GGupkreKwxA-unsplash.jpg')),
               Container(
                 width: 10,
               ),
-              Expanded(child: HotelCard(imagePath: 'images/suburb.jpg'))
+              Expanded(
+                  child: HotelCard(
+                      title: 'Suburban Luxe',
+                      description: 'Book your getaway to this contem...',
+                      price: '3,349\$',
+                      rating: '4.8',
+                      imagePath: 'images/suburb.jpg'))
             ],
           ),
           Container(
@@ -33,12 +43,21 @@ class HotelGrid extends StatelessWidget {
             children: [
               Expanded(
                   child: HotelCard(
-                      imagePath:
-                      'images/garden.png')),
+                      title: 'Urban Luxe',
+                      description: 'Book your getaway to this contem...',
+                      price: '3,899\$',
+                      rating: '4.8',
+                      imagePath: 'images/garden.png')),
               Container(
                 width: 10,
               ),
-              Expanded(child: HotelCard(imagePath: 'images/suite.png'))
+              Expanded(
+                  child: HotelCard(
+                      title: 'Urban Luxe',
+                      description: 'Book your getaway to this contem...',
+                      price: '3,899\$',
+                      rating: '4.8',
+                      imagePath: 'images/suite.png'))
             ],
           )
         ],
