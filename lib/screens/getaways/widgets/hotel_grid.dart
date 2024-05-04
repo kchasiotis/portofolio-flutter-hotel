@@ -12,10 +12,16 @@ class HotelGrid extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
             children: [
-              HotelCard(
-                  imagePath: 'images/r-architecture-GGupkreKwxA-unsplash.jpg'),
-              HotelCard(imagePath: 'images/suburb.jpg')
+              Expanded(
+                  child: HotelCard(
+                      imagePath:
+                          'images/r-architecture-GGupkreKwxA-unsplash.jpg')),
+              Container(
+                width: 10,
+              ),
+              Expanded(child: HotelCard(imagePath: 'images/suburb.jpg'))
             ],
           ),
           Container(
@@ -23,6 +29,7 @@ class HotelGrid extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
             children: [
               HotelCard(imagePath: 'images/garden.png'),
               HotelCard(imagePath: 'images/suite.png')

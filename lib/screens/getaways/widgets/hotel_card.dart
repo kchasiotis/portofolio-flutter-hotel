@@ -1,4 +1,3 @@
-// create stateless widget
 import 'package:flutter/material.dart';
 
 class HotelCard extends StatelessWidget {
@@ -10,7 +9,7 @@ class HotelCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: Container(
-        width: 150,
+        width: double.infinity,
         color: const Color(0xff16202F),
         child: Column(
           children: <Widget>[
@@ -18,8 +17,8 @@ class HotelCard extends StatelessWidget {
               image:
                   AssetImage(imagePath),
               fit: BoxFit.cover,
-              height: 160,
-              width: 150,
+              height: 150,
+              width: double.infinity,
             ),
             Padding(
               padding: EdgeInsets.only(top: 10, left: 12),

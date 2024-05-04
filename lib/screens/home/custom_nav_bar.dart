@@ -56,7 +56,6 @@ class CustomNavBarState extends State<CustomNavBar> {
     return SafeArea(
         child: Container(
       height: 85,
-      //TODO: In Future remove the height
       padding: const EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 11),
       margin: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
@@ -72,7 +71,6 @@ class CustomNavBarState extends State<CustomNavBar> {
           ),
         ],
       ),
-      // TODO: Animated Icons,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
