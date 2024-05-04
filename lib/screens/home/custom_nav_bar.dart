@@ -1,6 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:portofolio/screens/getaways/widgets/input_widget.dart';
+
+class MenuItem extends StatelessWidget {
+  MenuItem({required this.icon, required this.text});
+
+  final String icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          SvgPicture.asset(
+            icon,
+            width: 24,
+            height: 24,
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 3),
+            child: Text(
+              text,
+              style: TextStyle(
+                color: Colors.white54,
+                fontSize: 10,
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
 
 Color bottonNavBgColor = Color(0xff0C1015);
 
@@ -68,7 +99,19 @@ class CustomNavBarState extends State<CustomNavBar> {
                     ),
                   )
                 ],
-              )
+              ),
+              MenuItem(
+                icon: 'images/nav_bar/message-question.svg',
+                text: 'inbox',
+              ),
+              MenuItem(
+                icon: 'images/nav_bar/heart.svg',
+                text: 'favourites',
+              ),
+              MenuItem(
+                icon: 'images/nav_bar/profile.svg',
+                text: 'profile',
+              ),
             ],
           )),
     ));
