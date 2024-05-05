@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/screens/getaways/widgets/hotel_card.dart';
 
+// todo: Look into using a sliver grid
 class HotelGrid extends StatelessWidget {
   const HotelGrid({super.key});
 
