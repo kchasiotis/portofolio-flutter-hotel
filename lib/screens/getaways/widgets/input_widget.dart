@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:portofolio/screens/getaways/widgets/main-text-field.dart';
+import 'package:portofolio/screens/getaways/widgets/main_text_field.dart';
 
 const String svgString = '''
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

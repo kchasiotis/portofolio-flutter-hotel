@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portofolio/screens/getaways/find-getaways.dart';
-import 'package:portofolio/screens/home/home.dart';
+import 'package:portofolio/screens/getaways/find_getaways.dart';
+import 'package:portofolio/widgets/custom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xff0C1015)
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return const Scaffold(
-      bottomNavigationBar: NavigationBar2(), // here you make use of the transparent bar.
+      bottomNavigationBar: CustomNavBar(), // here you make use of the transparent bar.
       extendBody: true, // very important as noted
 
       body: Center(
