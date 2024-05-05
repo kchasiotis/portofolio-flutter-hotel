@@ -1,19 +1,40 @@
 import 'package:flutter/material.dart';
 
-class TextCarousel extends StatelessWidget {
-  const TextCarousel({super.key});
+class TextElement extends StatelessWidget {
+  const TextElement({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(
+          left: 16,
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 16,
+            color: Color(0xff39414E),
+          ),
+        ));
+  }
+}
+
+class TextCarousel extends StatelessWidget {
+  const TextCarousel({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+        padding: EdgeInsets.only(
           left: 30,
         ),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: <Widget>[
-              const Text(
+              Text(
                 'Luxe',
                 style: TextStyle(
                   fontSize: 16,
@@ -22,46 +43,18 @@ class TextCarousel extends StatelessWidget {
                   decorationColor: Colors.white,
                 ),
               ),
-              Container(
-                width: 16,
+              TextElement(
+                text: 'Countryside',
               ),
-              const Text(
-                'Countryside',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff39414E),
-                ),
+              TextElement(
+                text: 'Islands',
               ),
-              Container(
-                width: 16,
+              TextElement(
+                text: 'Private rooms',
               ),
-              const Text(
-                'Islands',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff39414E),
-                ),
+              TextElement(
+                text: 'Desert',
               ),
-              Container(
-                width: 16,
-              ),
-              const Text(
-                'Private rooms',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff39414E),
-                ),
-              ),
-              Container(
-                width: 16,
-              ),
-              const Text(
-                'Desert',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff39414E),
-                ),
-              )
             ],
           ),
         ));
