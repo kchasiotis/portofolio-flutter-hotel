@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/screens/getaways/find_getaways.dart';
-import 'package:portofolio/screens/home/custom_nav_bar.dart';
+import 'package:portofolio/widgets/custom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
