@@ -1,5 +1,23 @@
 //create stateless widget
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+const String condoText = '''
+A stay straight out of the pages of a Ruskin Bond novel
+
+One of the most successful Luxe in India
+
+• In Tandi, a village above Jibhi
+• Tree inside. A balcony, double bed, and a remarkably clean, modern bathroom.
+• Wheat and maize fields , apple and pear orchards
+• You'll see flying squirrels in the night.
+• Beautiful sunrise
+• You'll get two dongles-Airtel and Jio-with as much data as you need
+• Hair Dryer• Breakfast
+• Oven/Toaster/Coffee Maker/Refrigerator
+
+Parking spot is available.
+''';
 
 class GetawayStay extends StatelessWidget {
   const GetawayStay({Key? key}) : super(key: key);
@@ -81,7 +99,104 @@ class GetawayStay extends StatelessWidget {
                   )))
         ])),
         Expanded(
-          child: Container(),
+          child: SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Column(children: [
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                          padding: EdgeInsets.only(top: 11),
+                          child: Text('2 guests - 1 bedroom',
+                              style: TextStyle(
+                                  color: Color(0xff9E9FA1), fontSize: 16))),
+                      Padding(
+                          padding: EdgeInsets.only(top: 0),
+                          child: Text('per night',
+                              style: TextStyle(
+                                  color: Color(0xff9E9FA1), fontSize: 14))),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text('1 bed - 1 bathroom',
+                          style: TextStyle(
+                              color: Color(0xff9E9FA1), fontSize: 16))),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const SizedBox(
+                      width: double.infinity,
+                      child: Divider(
+                        thickness: 1,
+                        color: Color(0xff39414E),
+                        height: 1,
+                      )),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset(
+                            'images/getaway/profile-pic.png',
+                            width: 50,
+                            height: 50,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Mighty Zeus',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              Text(
+                                '4.8 stars - 59 reviews',
+                                style: TextStyle(
+                                  color: Color(0xff9E9FA1),
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Image.asset(
+                              'images/getaway/message-question.png')),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const SizedBox(
+                      width: double.infinity,
+                      child: Divider(
+                        thickness: 1,
+                        color: Color(0xff39414E),
+                        height: 1,
+                      )),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Text(condoText,
+                      style: TextStyle(color: Color(0xff9E9FA1), fontSize: 16)),
+                ])),
+          ),
         ),
       ]),
     );
