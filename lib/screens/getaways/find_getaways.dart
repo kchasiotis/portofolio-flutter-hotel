@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portofolio/screens/getaways/widgets/text_carousel.dart';
 import 'package:portofolio/screens/getaways/widgets/input_widget.dart';
 import 'widgets/hotel_grid.dart';
-import 'widgets/hotel_card.dart';
 
 //todo: set distances as constants
 class FindGetaways extends StatelessWidget {

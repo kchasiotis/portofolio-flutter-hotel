@@ -7,8 +7,9 @@ class HotelCard extends StatelessWidget {
   final String price;
   final String rating;
 
-  HotelCard(
-      {required this.imagePath,
+  const HotelCard(
+      {super.key,
+      required this.imagePath,
       required this.title,
       required this.description,
       required this.price,
@@ -61,6 +62,7 @@ class HotelCard extends StatelessWidget {
               height: 16,
             ),
             Padding(
+                padding: const EdgeInsets.only(left: 12),
                 child: Align(
                     alignment: Alignment.centerLeft,
                     child: Row(
@@ -90,8 +92,7 @@ class HotelCard extends StatelessWidget {
                           ),
                         ),
                       ],
-                    )),
-                padding: const EdgeInsets.only(left: 12)),
+                    ))),
             Container(
               height: 12,
             ),

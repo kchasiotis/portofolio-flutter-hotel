@@ -2,38 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MenuItem extends StatelessWidget {
-  MenuItem({required this.icon, required this.text});
+  const MenuItem({super.key, required this.icon, required this.text});
 
   final String icon;
   final String text;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          SvgPicture.asset(
-            icon,
-            width: 24,
-            height: 24,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 3),
-            child: Text(
-              text,
-              style: const TextStyle(
-                color: Colors.white54,
-                fontSize: 10,
-              ),
+    return Column(
+      children: [
+        SvgPicture.asset(
+          icon,
+          width: 24,
+          height: 24,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 3),
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: Colors.white54,
+              fontSize: 10,
             ),
-          )
-        ],
-      ),
+          ),
+        )
+      ],
     );
   }
 }
 
-Color bottonNavBgColor = const Color(0xff0C1015);
+Color bottomNavBgColor = const Color(0xff0C1015);
 
 class CustomNavBar extends StatefulWidget {
   static int _selectedIndex = 0;
@@ -59,13 +57,13 @@ class CustomNavBarState extends State<CustomNavBar> {
       padding: const EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 11),
       margin: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
-        color: bottonNavBgColor.withOpacity(0.98),
+        color: bottomNavBgColor.withOpacity(0.98),
         border: Border(top: BorderSide(color: Colors.white.withOpacity(0.2))),
         borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(32), topRight: Radius.circular(32)),
         boxShadow: [
           BoxShadow(
-            color: bottonNavBgColor.withOpacity(0.3),
+            color: bottomNavBgColor.withOpacity(0.3),
             offset: const Offset(0, 20),
             blurRadius: 20,
           ),
@@ -95,15 +93,15 @@ class CustomNavBarState extends State<CustomNavBar> {
               )
             ],
           ),
-          MenuItem(
+          const MenuItem(
             icon: 'images/nav_bar/message-question.svg',
             text: 'inbox',
           ),
-          MenuItem(
+          const MenuItem(
             icon: 'images/nav_bar/heart.svg',
             text: 'favourites',
           ),
-          MenuItem(
+          const MenuItem(
             icon: 'images/nav_bar/profile.svg',
             text: 'profile',
           ),

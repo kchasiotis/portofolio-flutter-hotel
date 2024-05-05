@@ -59,10 +59,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
       decoration: InputDecoration(
         isDense: true,
         // this will remove the default content padding
-      hoverColor: Colors.white,
+        hoverColor: Colors.white,
         hintText: 'find your desired stay',
         hintStyle: const TextStyle(color: Color(0xff39414E)),
-        prefixIcon:                                   SvgPicture.string(
+        prefixIcon: SvgPicture.string(
           textSvg,
           width: 20,
           height: 20,

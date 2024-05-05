@@ -14,7 +14,7 @@ class HotelGrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Expanded(
+              const Expanded(
                   child: HotelCard(
                       title: 'Urban Luxe',
                       description: 'Book your getaway to this contem...',
@@ -25,7 +25,7 @@ class HotelGrid extends StatelessWidget {
               Container(
                 width: 10,
               ),
-              Expanded(
+              const Expanded(
                   child: HotelCard(
                       title: 'Suburban Luxe',
                       description: 'Book your getaway to this contem...',
@@ -41,7 +41,7 @@ class HotelGrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Expanded(
+              const Expanded(
                   child: HotelCard(
                       title: 'Burbon Luxe',
                       description: 'Book your getaway to this contem...',
@@ -51,7 +51,7 @@ class HotelGrid extends StatelessWidget {
               Container(
                 width: 10,
               ),
-              Expanded(
+              const Expanded(
                   child: HotelCard(
                       title: 'Suburbon Luxe',
                       description: 'Book your getaway to this contem...',
