@@ -61,38 +61,65 @@ class HotelCard extends StatelessWidget {
                       )),
                 ),
                 Container(
-                  height: 16,
+                  height: 2,
                 ),
                 Padding(
                     padding: const EdgeInsets.only(left: 12),
-                    child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Row(
+                    child: Container(
+                        height: 33,
+                        child: Stack(
                           children: [
-                            Text(
-                              price,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              '/',
-                              style: TextStyle(
-                                color: Colors.white54,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w100,
-                              ),
-                            ),
-                            const Text(
-                              'night',
-                              style: TextStyle(
-                                color: Colors.white54,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w100,
-                              ),
-                            ),
+                            Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      price,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const Text(
+                                      '/',
+                                      style: TextStyle(
+                                        color: Colors.white54,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w100,
+                                      ),
+                                    ),
+                                    const Text(
+                                      'night',
+                                      style: TextStyle(
+                                        color: Colors.white54,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w100,
+                                      ),
+                                    ),
+                                  ],
+                                )),
+                            Positioned(
+                                right: 9,
+                                bottom: 1,
+                                child: Container(
+                                  height: 32,
+                                  width: 32,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xff0C1015),
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                      color: const Color(0xff232830),
+                                      width: 1,
+                                    ),
+                                  ),
+                                  child: Image.asset(
+                                    'images/arrow-right.png',
+                                    color: Colors.white,
+                                    width: 16,
+                                    height: 16,
+                                  ),
+                                )),
                           ],
                         ))),
                 Container(
@@ -110,7 +137,7 @@ class HotelCard extends StatelessWidget {
                     color: const Color(0xff0C1015),
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color: const Color(0xff24496c),
+                      color: const Color(0xff232830),
                       width: 1,
                     ),
                   ),
@@ -119,9 +146,7 @@ class HotelCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset('images/Star.png'),
-                      Container(
-                        width:2
-                      ),
+                      Container(width: 2),
                       Text(
                         rating,
                         style: const TextStyle(
