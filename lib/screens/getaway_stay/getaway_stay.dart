@@ -22,9 +22,26 @@ Parking spot is available.
 class GetawayStay extends StatelessWidget {
   const GetawayStay({Key? key}) : super(key: key);
 
+  // todo: fix padding on floatingActionButton
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(left: 40, right: 10),
+        child: SizedBox(
+            width: double.infinity,
+            height: 59,
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: const Text('Continue to reserve',
+                  style: TextStyle(fontSize: 16, color: Colors.black)),
+            )),
+      ),
       body: Column(children: [
         Expanded(
             child: Stack(children: [
@@ -102,7 +119,7 @@ class GetawayStay extends StatelessWidget {
           child: SingleChildScrollView(
             child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: Column(children: [
+                child:                     Column(children: [
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,7 +211,8 @@ class GetawayStay extends StatelessWidget {
                     height: 30,
                   ),
                   const Text(condoText,
-                      style: TextStyle(color: Color(0xff9E9FA1), fontSize: 16)),
+                      style: TextStyle(
+                          color: Color(0xff9E9FA1), fontSize: 16)),
                 ])),
           ),
         ),
