@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portofolio/screens/getaway_stay/getaway_stay.dart';
 import 'package:portofolio/screens/getaways/find_getaways.dart';
 import 'package:portofolio/widgets/custom_nav_bar.dart';
 
@@ -32,9 +33,12 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-        scaffoldBackgroundColor: const Color(0xff0C1015)
+        scaffoldBackgroundColor: const Color(0xff0C1015),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        '/': (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+        '/getaway': (context) => GetawayStay(),
+      },
     );
   }
 }
