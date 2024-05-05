@@ -10,33 +10,31 @@ class FindGetaways extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Container(
-            color: const Color(0xff0C1015),
-            child: Column(children: <Widget>[
-              const Padding(
-                  padding: EdgeInsets.only(left: 30, right: 30, top: 70),
-                  child: Text(
-                    'Find the best getaways for you',
-                    style: TextStyle(fontSize: 32, color: Colors.white),
-                  )),
-              Container(
-                height: 24,
-              ),
-              Container(
-                height: 24,
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 30, right: 30),
-                child: InputWidget(),
-              ),
-              Container(
-                height: 24,
-              ),
-              const TextCarousel(),
-              Container(
-                height: 20,
-              ),
-              const HotelGrid(),
-            ])));
+        child: Column(children: <Widget>[
+      const Padding(
+          padding: EdgeInsets.only(left: 30, right: 30, top: 70),
+          child: Text(
+            'Find the best getaways for you',
+            style: TextStyle(fontSize: 32, color: Colors.white),
+          )),
+      Container(
+        height: 24,
+      ),
+      Container(
+        height: 24,
+      ),
+      const Padding(
+        padding: EdgeInsets.only(left: 30, right: 30),
+        child: InputWidget(),
+      ),
+      Container(
+        height: 24,
+      ),
+      const TextCarousel(),
+      Container(
+        height: 20,
+      ),
+      const HotelGrid(),
+    ]));
   }
 }
